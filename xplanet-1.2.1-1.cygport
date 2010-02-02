@@ -1,0 +1,6 @@
+DESCRIPTION="Renders images of planets to X window"
+HOMEPAGE="http://xplanet.sourceforge.net/"
+SRC_URI="mirror://sourceforge/xplanet/${P}.tar.gz"
+
+# --with-cygwin means with Win32 Display support
+CYGCONF_ARGS="--without-cygwin"

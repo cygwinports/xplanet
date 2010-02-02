@@ -1,0 +1,8 @@
+category: Science X11
+requires: libfreetype6 libgcc1 libgif4 libglib2.0_0 libiconv2 libintl8 libjpeg7 libpango1.0_0 libpng12 libstdc++6 libtiff5 libX11_6 libXss1
+sdesc: "Renders image of planets to X window"
+ldesc: "Xplanet was inspired by Xearth, which renders an image of the 
+earth into the X root window. All of the major planets and most 
+satellites can be drawn, similar to the Solar System Simulator. A number 
+of different map projections are also supported, including azimuthal, 
+Lambert, Mercator, Mollweide, orthographic, and rectangular."
