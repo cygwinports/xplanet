@@ -1,0 +1,15 @@
+NAME="xplanet"
+VERSION=1.3.0
+RELEASE=1
+CATEGORY="Science X11"
+SUMMARY="Renders images of planets to X window"
+DESCRIPTION="Xplanet was inspired by Xearth, which renders an image of the
+earth into the X root window. All of the major planets and most satellites
+can be drawn, similar to the Solar System Simulator. A number of different
+map projections are also supported, including azimuthal, Lambert, Mercator,
+Mollweide, orthographic, and rectangular."
+HOMEPAGE="http://xplanet.sourceforge.net/"
+SRC_URI="mirror://sourceforge/xplanet/${P}.tar.gz"
+
+# --with-cygwin means with Win32 Display support
+CYGCONF_ARGS="--without-cygwin"
