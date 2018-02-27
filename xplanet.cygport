@@ -1,6 +1,6 @@
 NAME="xplanet"
-VERSION=1.3.0
-RELEASE=2
+VERSION=1.3.1
+RELEASE=1
 CATEGORY="Science X11"
 SUMMARY="Renders images of planets to X window"
 DESCRIPTION="Xplanet was inspired by Xearth, which renders an image of the
@@ -10,6 +10,21 @@ map projections are also supported, including azimuthal, Lambert, Mercator,
 Mollweide, orthographic, and rectangular."
 HOMEPAGE="http://xplanet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/xplanet/xplanet-${VERSION}.tar.gz"
+PATCH_URI="
+	https://gitweb.gentoo.org/repo/gentoo.git/plain/x11-misc/xplanet/files/xplanet-1.3.1-giflib.patch
+	1.3.1-c++11.patch
+"
+
+REQUIRES="gnu-free-fonts"
 
 # --with-cygwin means with Win32 Display support
 CYGCONF_ARGS="--without-cygwin"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	rm -f ${D}/usr/share/xplanet/fonts/FreeMonoBold.ttf
+	dosym /usr/share/fonts/gnu-free/FreeMonoBold.ttf \
+	      /usr/share/xplanet/fonts/FreeMonoBold.ttf
+}
